@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Jan-2023 às 15:34
+-- Tempo de geração: 28-Jan-2023 às 16:33
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `formula_1`
+-- Banco de dados: `formula1`
 --
 
 -- --------------------------------------------------------
@@ -43650,7 +43650,8 @@ ALTER TABLE `construtores`
 -- Índices para tabela `corridas`
 --
 ALTER TABLE `corridas`
-  ADD PRIMARY KEY (`raceId`);
+  ADD PRIMARY KEY (`raceId`),
+  ADD KEY `circuitId` (`circuitId`);
 
 --
 -- Índices para tabela `pilotos`
@@ -43662,19 +43663,27 @@ ALTER TABLE `pilotos`
 -- Índices para tabela `pitstops`
 --
 ALTER TABLE `pitstops`
-  ADD PRIMARY KEY (`pitId`);
+  ADD PRIMARY KEY (`pitId`),
+  ADD KEY `driveId` (`driveId`),
+  ADD KEY `raceId` (`raceId`);
 
 --
 -- Índices para tabela `resultados`
 --
 ALTER TABLE `resultados`
-  ADD PRIMARY KEY (`resultId`);
+  ADD PRIMARY KEY (`resultId`),
+  ADD KEY `constructorId` (`constructorId`),
+  ADD KEY `driverId` (`driverId`),
+  ADD KEY `raceId` (`raceId`),
+  ADD KEY `statusId` (`statusId`);
 
 --
 -- Índices para tabela `resultados_construtores`
 --
 ALTER TABLE `resultados_construtores`
-  ADD PRIMARY KEY (`constructorResultsId`);
+  ADD PRIMARY KEY (`constructorResultsId`),
+  ADD KEY `constructorId` (`constructorId`),
+  ADD KEY `raceId` (`raceId`);
 
 --
 -- Índices para tabela `status`
@@ -43733,6 +43742,39 @@ ALTER TABLE `resultados_construtores`
 --
 ALTER TABLE `status`
   MODIFY `statusId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `corridas`
+--
+ALTER TABLE `corridas`
+  ADD CONSTRAINT `corridas_ibfk_1` FOREIGN KEY (`circuitId`) REFERENCES `circuitos` (`circuitoId`);
+
+--
+-- Limitadores para a tabela `pitstops`
+--
+ALTER TABLE `pitstops`
+  ADD CONSTRAINT `pitstops_ibfk_1` FOREIGN KEY (`driveId`) REFERENCES `pilotos` (`driverId`),
+  ADD CONSTRAINT `pitstops_ibfk_2` FOREIGN KEY (`raceId`) REFERENCES `corridas` (`raceId`);
+
+--
+-- Limitadores para a tabela `resultados`
+--
+ALTER TABLE `resultados`
+  ADD CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`constructorId`) REFERENCES `construtores` (`constructorId`),
+  ADD CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`driverId`) REFERENCES `pilotos` (`driverId`),
+  ADD CONSTRAINT `resultados_ibfk_3` FOREIGN KEY (`raceId`) REFERENCES `corridas` (`raceId`),
+  ADD CONSTRAINT `resultados_ibfk_4` FOREIGN KEY (`statusId`) REFERENCES `status` (`statusId`);
+
+--
+-- Limitadores para a tabela `resultados_construtores`
+--
+ALTER TABLE `resultados_construtores`
+  ADD CONSTRAINT `resultados_construtores_ibfk_1` FOREIGN KEY (`constructorId`) REFERENCES `construtores` (`constructorId`),
+  ADD CONSTRAINT `resultados_construtores_ibfk_2` FOREIGN KEY (`raceId`) REFERENCES `corridas` (`raceId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
