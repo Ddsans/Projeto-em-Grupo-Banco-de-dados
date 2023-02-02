@@ -8,7 +8,7 @@ ORDER BY total DESC
 LIMIT 10
 
 
-2  os pais têm a maior quantidade de circuitos ?
+2  os paises que têm a maior quantidade de circuitos ?
 
 SELECT country, COUNT(circuitRef) as count
 FROM circuitos
