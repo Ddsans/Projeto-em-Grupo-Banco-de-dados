@@ -1,0 +1,23 @@
+1- qual circuito que mais apareceu disputado na fórmula 1 top 10?  
+
+SELECT circuitos.name,circuitos.country, COUNT(corridas.circuitId) as total
+FROM corridas
+JOIN circuitos ON corridas.circuitId = circuitos.circuitoId
+GROUP BY corridas.circuitId
+ORDER BY total DESC
+LIMIT 10
+
+
+2  os pais têm a maior quantidade de circuitos ?
+
+SELECT country, COUNT(circuitRef) as count
+FROM circuitos
+GROUP BY country
+ORDER BY count DESC
+LIMIT 5;
+
+
+3 - Listar todos os anos em que houve corridas no circuito de Mônaco:
+SELECT DISTINCT year FROM corridas WHERE circuitId = (SELECT circuitId FROM circuitos WHERE name = 'Circuit de Monaco')
+
+
