@@ -16,25 +16,25 @@ Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a parti
   <img src="./Circuitos/grafico-circuito.png">
 </p>
 
-**Ranking de pilotos na primeira colocação no Grid? 
+**Ranking de pilotos na primeira colocação no Grid?** 
 
 <p align="center">
   <img src="./grid 1/grid primeira colocaçao.png">
 </p>
 
-**Quais problemas mais recorrentes nos anos entre 2013-2017?
+**Quais problemas mais recorrentes nos anos entre 2013-2017?**
 
 <p align="center">
   <img src="./Problemas recorrentes 2013-2017/Problemas recorrentes 2013-2017.png">
 </p>
             
-**Quais construtoras realizou o pitstop mais rápido no período 2013 - 2017?           
+**Quais construtoras realizou o pitstop mais rápido no período 2013 - 2017?**           
             
 <p align="center">
   <img src="./pitstops/Problemas recorrentes 2013-2017 (1).png">
 </p>
 
-**Quais construtoras têm maior quantidade de vitórias disponível em nosso sistema?
+**Quais construtoras têm maior quantidade de vitórias disponível em nosso sistema?**
 <p align="center">
   <img src="./pitstops/contrutores/Nº vitórias.png">
 </p>
