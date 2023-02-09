@@ -4,8 +4,12 @@
 
 Neste projeto foi proposto a montagem de um dashboard com base no conjunto de dados escolhido pelo grupo, a fim de realizar uma apresentação com a exploração dos dados.
 
+---
+
 ## Modelo Lógico
 ![imagem modelo lógico](./md_logico.jpg)
+
+---
 
 ## Perguntas
 Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a partir dos resultados obtidos:
@@ -39,12 +43,16 @@ Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a parti
   <img src="./contrutores/Nº vitórias.png">
 </p>
 
+---
+
 ## :hammer_and_wrench: Ferramentas utilizadas
 * Apache
 * MYSQL
 * Excel
 * XAMPP
 * Canva
+
+---
          
 ## :people_holding_hands: Equipe
 - <a href="https://github.com/Ddsans">@Ddsans</a>
