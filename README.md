@@ -7,7 +7,8 @@ Neste projeto foi proposto a montagem de um dashboard com base no conjunto de da
 ## Modelo Lógico
 ![imagem modelo lógico](./md_logico.jpg)
 
-## Perguntas utilizadas nas pesquisas
+## Perguntas
+Essas foram as perguntas utilizadas nas pesquisas e gráficos gerados a partir dos resultados obtidos
 
 Quais autódromos mais utilizados?
 
@@ -15,3 +16,8 @@ Quais autódromos mais utilizados?
   <img src="./Circuitos/grafico-circuito.png">
 </p>
 
+Ranking de pilotos na primeira colocação no Grid?
+
+<p align="center">
+  <img src="./grid 1/grid primeira colocaçao.png">
+</p>
