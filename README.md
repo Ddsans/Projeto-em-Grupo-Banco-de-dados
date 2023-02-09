@@ -10,7 +10,7 @@ Neste projeto foi proposto a montagem de um dashboard com base no conjunto de da
 ## Perguntas
 Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a partir dos resultados obtidos:
 
-**Quais autódromos mais utilizados?
+**Quais autódromos mais utilizados?**
 
 <p align="center">
   <img src="./Circuitos/grafico-circuito.png">
