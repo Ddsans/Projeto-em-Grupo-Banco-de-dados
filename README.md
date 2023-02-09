@@ -39,4 +39,4 @@ Quais construtoras têm maior quantidade de vitórias disponível em nosso siste
   <img src="./pitstops/contrutores/Nº vitórias.png>
 </p>
             
-            
+          
