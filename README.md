@@ -36,7 +36,7 @@ Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a parti
 
 **Quais construtoras têm maior quantidade de vitórias disponível em nosso sistema?**
 <p align="center">
-  <img src="./pitstops/contrutores/Nº vitórias.png">
+  <img src="./contrutores/Nº vitórias.png">
 </p>
 
 ## :hammer_and_wrench: Ferramentas utilizadas
