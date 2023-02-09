@@ -11,5 +11,7 @@ Neste projeto foi proposto a montagem de um dashboard com base no conjunto de da
 
 Quais autódromos mais utilizados?
 
-![imagem gráfico dos autódromos](./Circuitos/grafico-circuito.png)
+<p align="center">
+  <img src="./Circuitos/grafico-circuito.png">
+</p>
 
