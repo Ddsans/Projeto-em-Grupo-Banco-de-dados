@@ -45,6 +45,12 @@ Essas foram as perguntas utilizadas nas pesquisas e os gráficos gerados a parti
 
 ---
 
+## :bar_chart: Dashboard
+
+![imagem do dashboard criado](./dashboard.png)
+
+---
+
 ## :hammer_and_wrench: Ferramentas utilizadas
 * Apache
 * MYSQL
